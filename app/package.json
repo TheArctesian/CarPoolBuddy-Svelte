@@ -37,7 +37,10 @@
   "type": "module",
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
+    "@googlemaps/js-api-loader": "^1.13.4",
     "@lukeed/uuid": "^2.0.0",
-    "cookie": "^0.4.1"
+    "cookie": "^0.4.1",
+    "google": "^2.1.0",
+    "googlemaps": "^1.12.0"
   }
 }

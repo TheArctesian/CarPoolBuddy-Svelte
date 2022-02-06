@@ -152,3 +152,14 @@ Format:
 inited firebase and did auth
 
 <hr>
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 23:00 -24:00
+<br>
+<strong>Date: </strong> 6.2.22
+<br>
+<strong>Goal: </strong> init maps
+<br>
+<strong>Description: </strong>
+a lot of problems will fix later
+<hr>
