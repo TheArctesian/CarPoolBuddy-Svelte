@@ -29,11 +29,6 @@
 - [ ] Sign in and sign up page
 - [ ] Google Maps
 
-**Backend**
-
-- [ ] Allow users to sign up with their Google email account
-- [ ] Save User to firebase
-- [ ] Init firebase
 <hr>
 
 ### Done ✓
@@ -42,3 +37,9 @@
 
 - [x] ~~SetUp TODO~~
 - [x] ~~Init svelteKit~~
+
+**Backend**
+
+- [x] ~~Allow users to sign up with their Google email account~~
+- [x] ~~Save User to firebase~~
+- [x] ~~Init firebase~~

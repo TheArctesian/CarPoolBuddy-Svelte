@@ -130,10 +130,25 @@ Format:
 <hr>
 <strong>Name: </strong> Stephen
 <br>
-<strong>Time: </strong>  16:00 - 
+<strong>Time: </strong>  16:00 - 18:00
 <br>
 <strong>Date: </strong>  5.2.22
 <br>
-<strong>Goal: </strong> init svelte kit tailwind firebase and shit
+<strong>Goal: </strong> init svelte kit and think of UI 
+<br>
+<strong>Description: </strong> make svelte kit and did the position absolute stuff
+
+<hr>
+
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 12:53 - 13:21
+<br>
+<strong>Date: </strong> 6.2.22
+<br>
+<strong>Goal: </strong> init firebase and auth
 <br>
 <strong>Description: </strong>
+inited firebase and did auth
+
+<hr>
