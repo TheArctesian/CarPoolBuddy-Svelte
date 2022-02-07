@@ -12,7 +12,6 @@
 		width: 100%;
 		max-width: 1024px;
 		margin: 0 auto;
-		box-sizing: border-box;
 	}
 
 	footer {
@@ -69,8 +68,8 @@
 	</a>
 </footer>
 <ul>
-	<li class:active={$page.url.pathname === '/'}>
-		<a class="link" sveltekit:prefetch href="/">Maps</a>
+	<li class:active={$page.url.pathname === '/App'}>
+		<a class="link" sveltekit:prefetch href="/App">Maps</a>
 	</li>
 	<li class:active={$page.url.pathname === '/account'}>
 		<a class="link" sveltekit:prefetch href="/account">Account</a>
