@@ -7,12 +7,12 @@
 </svelte:head>
 
 <main>
-	<div
-		class="flex bg-gray-300 p-2 rounded-2xl text-center drop-shadow justify-center relative
-		items-center">
+	<div class="grid place-items-center h-screen ">
 		{#if $auth.known}
 			{#if $auth.user}
-				<div class="flex m-3">
+				<div
+					class="flex m-3 flex bg-gray-300 p-2 rounded-2xl text-center drop-shadow justify-center
+					relative items-center">
 					<img
 						alt="userPhoto"
 						class="rounded-full drop-shadow border-solid border-2 border-green-500"
@@ -30,7 +30,9 @@
 					</button>
 				</div>
 			{:else}
-				<div class="flex content-center">
+				<div
+					class="flex content-center flex bg-gray-300 p-2 rounded-2xl text-center drop-shadow
+					justify-center relative items-center">
 					<button on:click={() => auth.signInWith('google')}>
 						<img
 							alt="sign in button"

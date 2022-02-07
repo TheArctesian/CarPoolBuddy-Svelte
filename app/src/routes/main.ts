@@ -1,6 +1,5 @@
 //import App/svelte
-// @ts-ignore
-import { App } from './App.svelte';
+import App from './App.svelte';
 import '@types/google.maps';
 
 const app = new App({

@@ -3,7 +3,6 @@
 	//import map.svelte
 	import Map from '../components/map.svelte';
 	export let ready;
-	export let App;
 </script>
 
 <style>
@@ -25,7 +24,7 @@
 	<Map />
 {/if}
 {#if !ready}
-	<div class="m-auto text-center">
+	<div class="grid place-items-center h-screen">
 		<RingLoader />
 
 	</div>
