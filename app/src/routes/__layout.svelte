@@ -65,4 +65,7 @@
 	<li class:active={$page.url.pathname === '/account'}>
 		<a class="link" sveltekit:prefetch href="/account">Account</a>
 	</li>
+	<li class:active={$page.url.pathname === '/vehicle'}>
+		<a class="link" sveltekit:prefetch href="/vehicle">Vehicle</a>
+	</li>
 </ul>

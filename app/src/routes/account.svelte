@@ -4,7 +4,7 @@
 	import { addUserDB } from '$lib/db';
 	import { onMount } from 'svelte';
 	onMount(async () => {
-		addUserDB($auth.user);
+		await addUserDB($auth.user);
 	});
 </script>
 

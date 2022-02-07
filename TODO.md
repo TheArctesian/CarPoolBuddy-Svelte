@@ -2,9 +2,6 @@
 
 ### Todo
 
-**Overall Goals**
-
-- [ ] Create an incentive system for users to want to use renewable energy vehicles
 
 <hr>
 
@@ -18,7 +15,7 @@
 
 **Front end**
 
-- [ ] Add Vehicle
+- [ ] Create an incentive system for users to want to use renewable energy vehicles
 - [ ] Vehicle Profile
 - [ ] Vehicle Info page
 - [ ] Ride search page
@@ -31,7 +28,9 @@
 
 - [x] ~~Sign in and sign up page~~
 - [x] ~~Google Maps~~
-      **Overall**
+- [x] ~~Add Vehicle~~
+
+**Overall**
 
 - [x] ~~SetUp TODO~~
 - [x] ~~Init svelteKit~~

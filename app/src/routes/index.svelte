@@ -2,11 +2,19 @@
 	import { onMount } from 'svelte';
 	import { auth } from '../lib/auth';
 	import { RingLoader } from 'svelte-loading-spinners';
+	import { db } from '$lib/firebaseSetup';
+	import { latlng } from '../stores/stores'
+
 	let container;
 	let map;
 	let zoom = 12;
 	let center = { lat: 22.3193, lng: 114.1694 };
+	let latlngVal;
+	latlng.subscribe(value => {
+		latlngVal = value;
+	})
 	onMount(async () => {
+		
 		map = new google.maps.Map(container, {
 			zoom,
 			center
@@ -28,11 +36,13 @@
 			infoWindow = new google.maps.InfoWindow({
 				position: mapsMouseEvent.latLng
 			});
+			
 			infoWindow.setContent(
-				JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2) +
-					'<div><button onclick="addMarker(infoWindow)">Add Marker</button></div>'
+				'<div class="bg-green-400 rounded m-auto p-4 text-center"><a href="/vehicle"a>Add Vehicle</a></div>'
 			);
 			infoWindow.open(map);
+			latlngVal = mapsMouseEvent.latLng;
+			console.log(mapsMouseEvent.latLng + "lat lng")
 		});
 		// } else {
 		// 	window.location.href = '/account';
