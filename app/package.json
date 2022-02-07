@@ -38,6 +38,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@firebase/firestore": "^3.4.4",
     "@fontsource/fira-mono": "^4.5.0",
     "@googlemaps/js-api-loader": "^1.13.4",
     "@lukeed/uuid": "^2.0.0",

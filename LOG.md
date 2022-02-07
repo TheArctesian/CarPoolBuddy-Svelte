@@ -163,3 +163,16 @@ inited firebase and did auth
 <strong>Description: </strong>
 a lot of problems will fix later
 <hr>
+
+<hr>
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 13:00 - 17:30
+<br>
+<strong>Date: </strong> 7.2.22
+<br>
+<strong>Goal: </strong> init maps and firestore 
+<br>
+<strong>Description: </strong>
+fixed firestore made vehicle types and made maps work with markers, I have sat in bed all day doing this so much pain but I have done the learning and am goog now, I will now shower and eat maybe but I am going vegan now.
+<hr>

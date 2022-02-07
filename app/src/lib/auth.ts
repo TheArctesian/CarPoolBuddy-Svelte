@@ -17,7 +17,6 @@ export interface AuthState {
 
 const createAuth = () => {
 	const { subscribe, set } = writable<AuthState>({ user: null, known: false });
-
 	async function listen() {
 		const auth = getAuth(app);
 		onAuthStateChanged(
@@ -48,7 +47,6 @@ const createAuth = () => {
 		const auth = getAuth(app);
 		const provider = providerFor(name);
 		await signInWithRedirect(auth, provider);
-		console.log('something happend here');
 	}
 
 	async function signOut() {

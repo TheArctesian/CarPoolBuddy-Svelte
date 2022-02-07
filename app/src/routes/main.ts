@@ -1,5 +1,5 @@
 //import App/svelte
-import App from './App.svelte';
+import App from './index.svelte';
 import '@types/google.maps';
 
 const app = new App({
