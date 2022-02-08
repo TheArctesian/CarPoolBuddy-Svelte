@@ -3,6 +3,7 @@
 	import { RingLoader } from 'svelte-loading-spinners';
 	import { addUserDB } from '$lib/db';
 	import { onMount } from 'svelte';
+	import { latlng } from '../stores/stores';
 	onMount(async () => {
 		await addUserDB($auth.user);
 	});
@@ -11,7 +12,7 @@
 <svelte:head>
 	<title>account</title>
 </svelte:head>
-
+<p>{latlng}</p>
 <main>
 	<div class="grid place-items-center h-screen ">
 		{#if $auth.known}

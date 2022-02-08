@@ -6,6 +6,7 @@ export type vehicle = {
 	riders: User[];
 	capacity: number;
 	isElectric: boolean;
-	latlng: string;
+	lat: string;
+	lng: string;
 	leaveTime: string;
 };

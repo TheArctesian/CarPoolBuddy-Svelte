@@ -24,7 +24,8 @@ export async function addVehicleDB(vehicle: vehicle) {
 			riders: vehicle.riders,
 			capacity: vehicle.capacity,
 			leaveTime: vehicle.leaveTime,
-			latlng: vehicle.latlng
+			lat: vehicle.lat,
+			lng: vehicle.lng,
 		});
 		console.log('Document written with ID: ', docRef.id);
 	} catch (e) {
@@ -37,7 +38,8 @@ export async function addVehicleFormDB(owner: User,
 	riders: User[],
 	capacity: number,
 	isElectric: boolean,
-	latlng : string,
+	lat: string,
+	lng: string,
 	leaveTime: string) {
 	try {
 		const docRef = await addDoc(collection(db, 'vehicles'), {
@@ -46,7 +48,8 @@ export async function addVehicleFormDB(owner: User,
 			riders: riders,
 			capacity: capacity,
 			isElectric: isElectric,
-			latlng: latlng,
+			lat: lat,
+			lng: lng,
 			leaveTime: leaveTime,
 		});
 		console.log('Document written with ID: ', docRef.id);

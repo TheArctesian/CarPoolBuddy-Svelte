@@ -190,3 +190,27 @@ fixed firestore made vehicle types and made maps work with markers, I have sat i
 <strong>Description: </strong>
 ok this shit is not working so I am going to sleep and do this in the morning
 <hr>
+
+<hr>
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 06:00 - 07:00 
+<br>
+<strong>Date: </strong> 8.2.22
+<br>
+<strong>Goal: </strong> fix adding vehicle  
+<br>
+<strong>Description: </strong>
+it's kinda working it's good enough
+<hr>
+<strong>Name: </strong> Stephen
+<br>
+<strong>Time: </strong> 09:00 - 10:05 
+<br>
+<strong>Date: </strong> 8.2.22
+<br>
+<strong>Goal: </strong> fix adding vehicle  
+<br>
+<strong>Description: </strong>
+it's kinda working it's good enough
+<hr>

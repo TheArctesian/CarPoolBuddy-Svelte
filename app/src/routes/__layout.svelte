@@ -39,6 +39,7 @@
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;
+		background-color: transparent;
 	}
 	a:hover {
 		color: rgb(71, 152, 219);

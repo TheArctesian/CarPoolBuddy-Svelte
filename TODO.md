@@ -9,9 +9,7 @@
 
 **Overall Goals**
 
-- [ ] Let users add their vehicle to the database
 - [ ] Let users book a ride that is open
-- [ ] Let users open or close a vehicle they own
 
 **Front end**
 
@@ -26,18 +24,15 @@
 
 **Front end**
 
-- [x] ~~Sign in and sign up page~~
-- [x] ~~Google Maps~~
-- [x] ~~Add Vehicle~~
+- [x] ~~Sign in and Sign Up page~~
+- [x] ~~Google Maps Page~~
+- [x] ~~Add Vehicle Page~~
 
-**Overall**
-
-- [x] ~~SetUp TODO~~
-- [x] ~~Init svelteKit~~
 
 **Backend**
-
+- [x] ~~Let users add their vehicle to the database~~
 - [x] ~~Vehicle Class~~
 - [x] ~~Allow users to sign up with their Google email account~~
 - [x] ~~Save User to firebase~~
 - [x] ~~Init firebase~~
+- [x] Let users open or close a vehicle they own
