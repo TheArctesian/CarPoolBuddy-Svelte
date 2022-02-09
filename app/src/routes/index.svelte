@@ -5,6 +5,8 @@
 	import { db } from '$lib/firebaseSetup';
 	import { latlng } from '../stores/stores';
 	import { collection, getDocs } from 'firebase/firestore';
+	import { updateRiders } from '$lib/db';
+	import { dataset_dev } from 'svelte/internal';
 
 	let container;
 	let map;
@@ -16,13 +18,9 @@
 		latlngV = value;
 	});
 
-	latlngV = '(22.27498754156152, 114.21214368286131)';
 
 
 	onMount(async () => {
-		async 	function addRider() {
-		alert('hello');
-	}
 		map = new google.maps.Map(container, {
 			zoom,
 			center
@@ -37,8 +35,9 @@
 		infoWindow.open(map);
 
 		const querySnapshot = await getDocs(collection(db, 'vehicles'));
+
 		querySnapshot.forEach((doc) => {
-			// map data out 
+			// map data out
 			let data = doc.data();
 			let lat = data.lat;
 			let lng = data.lng;
@@ -54,15 +53,23 @@
 						<h3><strong>Model: </strong>${data.model}</h3>
 						<p><strong>Capacity: </strong>${data.capacity}</p>
 						<p><strong>Leave Time: </strong>${data.leaveTime}</p>
+						<p><strong>Riders: </strong>${data.riders}</p>
 						<button class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="addRider()">Join</button>
 					</div>
 				`);
 				infoWindow.open(map, marker);
-				console.log("made")
+				console.log('made');
 			});
 			console.log(doc.id, ' => ', doc.data());
+			async function addRider() {
+				let riders: string[] = data.riders;
+				console.log(riders + 'HULUULKULUL');
+				riders.push($auth.user.email);
+				if (data.capacity = 0){console.log("No Space"); return;}
+				updateRiders(doc.id, data.capacity - 1, riders);
+			}
 		});
-		
+
 		map.addListener('click', (mapsMouseEvent) => {
 			// Close the current InfoWindow.
 			infoWindow.close();
@@ -70,12 +77,11 @@
 			infoWindow = new google.maps.InfoWindow({
 				position: mapsMouseEvent.latLng
 			});
-			latlngV == mapsMouseEvent.latLng;
 			infoWindow.setContent(
 				'<div class="bg-green-400 rounded m-auto p-4 text-center"><a href="/vehicle"a>Add Vehicle</a></div>' +
 					'location: ' +
-					latlngV +
-					'<br/>' +	
+					mapsMouseEvent.latLng +
+					'<br/>' +
 					'<strong><h1 class="text-center">Please Copy this Value</h1></strong>'
 			);
 			infoWindow.open(map);

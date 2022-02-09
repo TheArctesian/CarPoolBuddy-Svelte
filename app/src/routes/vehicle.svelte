@@ -7,21 +7,23 @@
 	import { latlng } from '../stores/stores';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
+import { select_option } from 'svelte/internal';
 
 	let vehicleData: vehicle;
-	let owner: User = $auth.user;
+	let owner: string = '';
 	let model: string = '';
 	let capacity: number = 0;
 	let isElectric: boolean = false;
 	let leaveTime: string = '';
-	let riders: User[] = [];
+	let riders: string[] = [];
 	let lat: string;
 	let lng: string;
 
 	function addToDB() {
+		riders = [$auth.user.email];
 		console.log(owner, model, capacity, isElectric, leaveTime, riders, lat, lng);
-		addVehicleFormDB(owner, model, riders, capacity, isElectric, lat, lng, leaveTime);
-		window.location.href='/';
+		addVehicleFormDB($auth.user.email, model, riders, capacity, isElectric, lat, lng, leaveTime);
+		// window.location.href='/';
 	}
 </script>
 

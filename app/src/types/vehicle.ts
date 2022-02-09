@@ -1,9 +1,9 @@
 import type { User } from 'firebase/auth';
 
 export type vehicle = {
-	owner: User;
+	owner: string;
 	model: string;
-	riders: User[];
+	riders: string[];
 	capacity: number;
 	isElectric: boolean;
 	lat: string;
