@@ -12,7 +12,6 @@
 <svelte:head>
 	<title>account</title>
 </svelte:head>
-<p>{latlng}</p>
 <main>
 	<div class="grid place-items-center h-screen ">
 		{#if $auth.known}

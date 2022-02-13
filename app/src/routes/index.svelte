@@ -17,8 +17,7 @@
 	latlng.subscribe((value) => {
 		latlngV = value;
 	});
-
-
+	
 
 	onMount(async () => {
 		map = new google.maps.Map(container, {
@@ -47,21 +46,24 @@
 				map,
 				title: 'Vehicle'
 			});
+
 			marker.addListener('click', () => {
 				infoWindow.setContent(`
 					<div>
 						<h3><strong>Model: </strong>${data.model}</h3>
+						<p><strong>Electric: </strong>${data.isElectric}</p>
 						<p><strong>Capacity: </strong>${data.capacity}</p>
 						<p><strong>Leave Time: </strong>${data.leaveTime}</p>
 						<p><strong>Riders: </strong>${data.riders}</p>
-						<button class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick="addRider()">Join</button>
+						<button class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onclick=${addRider()}>Join</button>
 					</div>
 				`);
 				infoWindow.open(map, marker);
 				console.log('made');
+
 			});
 			console.log(doc.id, ' => ', doc.data());
-			async function addRider() {
+			function addRider() {
 				let riders: string[] = data.riders;
 				console.log(riders + 'HULUULKULUL');
 				riders.push($auth.user.email);
